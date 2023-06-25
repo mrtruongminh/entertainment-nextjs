@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 import Image from "next/image";
 import IconLogo from "../Icons/IconLogo";
 import IconNavHome from "../Icons/IconNavHome";
@@ -23,7 +23,8 @@ const Menu = () => {
 
 const Wrapper = styled.nav`
   width: 96px;
-  height: 960px;
+  height: 100%;
+  max-height: 960px;
   background-color: ${(props) => props.theme.colors.semiDarkBlue};
   border-radius: 20px;
   padding: 32px 0;
@@ -42,32 +43,27 @@ const StyledIconLogo = styled(IconLogo)`
   margin-bottom: 75px;
 `;
 
-const StyledIconNavHome = styled(IconNavHome)`
+const baseIconStyles = css`
   color: ${(props) => props.theme.colors.greyishBlue};
   &:hover {
     color: ${(props) => props.theme.colors.white};
   }
+`;
+
+const StyledIconNavHome = styled(IconNavHome)`
+  ${baseIconStyles}
 `;
 
 const StyledIconNavMovies = styled(IconNavMovies)`
-  color: ${(props) => props.theme.colors.greyishBlue};
-  &:hover {
-    color: ${(props) => props.theme.colors.white};
-  }
+  ${baseIconStyles}
 `;
 
 const StyledIconNavTvSeries = styled(IconNavTvSeries)`
-  color: ${(props) => props.theme.colors.greyishBlue};
-  &:hover {
-    color: ${(props) => props.theme.colors.white};
-  }
+  ${baseIconStyles}
 `;
 
 const StyledIconNavBookmark = styled(IconNavBookmark)`
-  color: ${(props) => props.theme.colors.greyishBlue};
-  &:hover {
-    color: ${(props) => props.theme.colors.white};
-  }
+  ${baseIconStyles}
 `;
 
 const Avatar = styled(Image)`
