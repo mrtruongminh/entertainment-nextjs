@@ -30,7 +30,7 @@ export default function Home({ posts }: HomeProps) {
         <GalleryWrapper>
           {data.map((n, idx) => (
             <ImageWrapper key={idx}>
-              <Image src={n.thumbnail.regular.large} fill alt="" />
+              <Image src={n.thumbnail.regular.large} fill alt={n.title} />
             </ImageWrapper>
           ))}
           {/* {posts.map((n) => (
