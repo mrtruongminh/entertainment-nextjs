@@ -23,8 +23,6 @@ const Menu = () => {
 
 const Wrapper = styled.nav`
   min-width: 96px;
-  /* height: 100%;
-  max-height: 960px; */
   height: 960px;
   background-color: ${(props) => props.theme.colors.semiDarkBlue};
   border-radius: 20px;
@@ -32,16 +30,41 @@ const Wrapper = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 72px;
+    padding: 18px 16px;
+    margin: 0 -16px;
+    border-radius: 0;
+  }
+
+  /* @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+  } */
 `;
 
 const SubWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    gap: 24px;
+  }
 `;
 
 const StyledIconLogo = styled(IconLogo)`
   margin-bottom: 75px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    margin-bottom: 0;
+  }
 `;
 
 const baseIconStyles = css`

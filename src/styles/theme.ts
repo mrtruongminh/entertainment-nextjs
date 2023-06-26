@@ -21,4 +21,9 @@ export const theme: DefaultTheme = {
       medium: 500,
     },
   },
+  breakpoints: {
+    sm: "375px",
+    md: "768px",
+    lg: "1200px",
+  },
 };

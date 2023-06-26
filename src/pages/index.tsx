@@ -3,7 +3,7 @@ import Image from "next/image";
 import { styled } from "styled-components";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
-import Grid from "@/components/Grid";
+// import Grid from "@/components/Grid";
 import GalleryWrapper from "@/components/GalleryWrapper";
 import data from "@/data.json";
 import type { Post } from "@/types";
@@ -30,7 +30,12 @@ export default function Home({ posts }: HomeProps) {
         <GalleryWrapper>
           {data.map((n, idx) => (
             <ImageWrapper key={idx}>
-              <Image src={n.thumbnail.regular.large} fill alt={n.title} />
+              <Image
+                src={n.thumbnail.regular.large}
+                fill
+                alt={n.title}
+                // sizes="(max-width: 768px) 164px, (max-width: 1200px) 220px, 280px"
+              />
             </ImageWrapper>
           ))}
           {/* {posts.map((n) => (
@@ -53,12 +58,12 @@ const ImageWrapper = styled.div`
   width: 280px;
   height: 174px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 220px;
     height: 140px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     width: 164px;
     height: 110px;
   }

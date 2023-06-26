@@ -22,6 +22,14 @@ const Wrapper = styled.div`
   background-color: ${(props) => props.theme.colors.darkBlue};
   display: flex;
   gap: 36px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+  }
 `;
 
 export default Layout;

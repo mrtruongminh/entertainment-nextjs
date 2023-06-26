@@ -22,5 +22,10 @@ declare module "styled-components" {
         medium: number;
       };
     };
+    breakpoints: {
+      sm: string;
+      md: string;
+      lg: string;
+    };
   }
 }
