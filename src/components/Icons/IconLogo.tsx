@@ -1,4 +1,4 @@
-import { Icon } from "./type";
+import type { Icon } from "../../types";
 
 export const IconLogo = ({ className }: Icon) => {
   return (

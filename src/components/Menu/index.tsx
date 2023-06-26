@@ -22,9 +22,10 @@ const Menu = () => {
 };
 
 const Wrapper = styled.nav`
-  width: 96px;
-  height: 100%;
-  max-height: 960px;
+  min-width: 96px;
+  /* height: 100%;
+  max-height: 960px; */
+  height: 960px;
   background-color: ${(props) => props.theme.colors.semiDarkBlue};
   border-radius: 20px;
   padding: 32px 0;

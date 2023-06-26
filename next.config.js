@@ -4,6 +4,16 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "3000",
+        pathname: "/media/**",
+      },
+    ],
+  },
   // webpack(config) {
   //   // Grab the existing rule that handles SVG imports
   //   const fileLoaderRule = config.module.rules.find((rule) =>
